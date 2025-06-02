@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حاسبة أدوية NICU</title>
+    <title>NICU drugs calculator</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -111,43 +111,43 @@
     </style>
 </head>
 <body>
-    <h1>حاسبة أدوية العناية المركزة لحديثي الولادة</h1>
+    <h1>NICU doses calculator</h1>
     
     <div class="tabs">
-        <button class="tab-btn active" onclick="openTab('intervals')">الفترات الزمنية</button>
-        <button class="tab-btn" onclick="openTab('dosages')">جرعات الأدوية</button>
+        <button class="tab-btn active" onclick="openTab('intervals')">Intervals of NICU drugs</button>
+        <button class="tab-btn" onclick="openTab('dosages')">NICU doses</button>
     </div>
     
     <!-- Intervals Tab -->
     <div id="intervals" class="tab-content active">
         <div class="calculator">
             <div class="form-group">
-                <label for="drug">اختر الدواء:</label>
+                <label for="drug">Choose the drug:</label>
                 <select id="drug">
-                    <option value="">-- اختر دواء --</option>
-                    <option value="unasyn">يوناسين (أمبيسيلين/سولبكتام)</option>
+                    <option value="">-- Choose a drug --</option>
+                    <option value="unictam">يونيكتام</option>
                     <option value="gentamycin">جنتاميسين</option>
-                    <option value="cefotax">سيفوتاكس (سيفوتاكسيم)</option>
+                    <option value="cefotax">سيفوتاكس</option>
                     <option value="vancomycin">فانكوميسين</option>
-                    <option value="meronam">ميرونام (ميروبينيم)</option>
-                    <option value="flagyl">فلاجيل (مترونيدازول)</option>
-                    <option value="diflucan">ديفلوكان (فلوكونازول)</option>
-                    <option value="dalacin">دالاسين-سي (كليندامايسين)</option>
-                    <option value="avrezolid">أفريزوليد (لينزوليد)</option>
+                    <option value="meronam">ميرونام</option>
+                    <option value="flagyl">فلاجيل</option>
+                    <option value="diflucan">ديفلوكان</option>
+                    <option value="dalacin">دالاسين سي</option>
+                    <option value="avrezolid">أفريزوليد</option>
                 </select>
             </div>
             
             <div class="form-group">
-                <label for="pma">العمر الحملي بالأسبوع:</label>
-                <input type="number" id="pma" min="22" max="45" placeholder="أدخل العمر الحملي بالأسبوع">
+                <label for="pma">Gestational age (wks):</label>
+                <input type="number" id="pma" min="22" max="45" placeholder="Insert the Gestational age (wks)">
             </div>
             
             <div class="form-group">
-                <label for="postnatal">العمر بعد الولادة بالأيام:</label>
-                <input type="number" id="postnatal" min="0" placeholder="أدخل العمر بعد الولادة بالأيام">
+                <label for="postnatal">Postnatal age (wks):</label>
+                <input type="number" id="postnatal" min="0" placeholder="Postnatal age (wks)">
             </div>
             
-            <button onclick="calculateInterval()">احسب الفترة الزمنية</button>
+            <button onclick="calculateInterval()">Show the interval of the drug</button>
             
             <div id="intervalResult" class="result"></div>
         </div>
@@ -157,9 +157,9 @@
     <div id="dosages" class="tab-content">
         <div class="calculator">
             <div class="form-group">
-                <label for="drugDosage">اختر الدواء:</label>
+                <label for="drugDosage">Choose the drug:</label>
                 <select id="drugDosage" onchange="showDosageOptions()">
-                    <option value="">-- اختر دواء --</option>
+                    <option value="">-- Choose a drug --</option>
                     <option value="unictam">يونيكتام 375 مجم</option>
                     <option value="gentamycin">جنتاميسين 80 مجم</option>
                     <option value="amikacin">أميكين 100 مجم</option>
@@ -176,23 +176,23 @@
                     <option value="phenytoin">إيبانوتين 250 مجم</option>
                     <option value="Caffeine">كافيين ستريت</option>
                     <option value="konakion">كوناكيون</option>
+                    <option value="lasix">لازكس</option>
                     <option value="dopamine1">دوبامين (1+7)</option>
                     <option value="dopamine2">دوبامين غير مخفف</option>
                     <option value="dobutamine">دوبيوتامين غير مخفف</option>
                     <option value="adrenaline">أدرينالين</option>
                     <option value="sildenafil">سيليدين</option>
-                    <option value="lasix">لازكس</option>
-                </select>
+                    </select>
             </div>
             
             <div id="dosageOptions"></div>
             
             <div class="form-group">
-                <label for="weight">وزن الطفل (كجم):</label>
-                <input type="number" id="weight" min="0.5" max="10" step="0.01" placeholder="أدخل وزن الطفل بالكيلوجرام">
+                <label for="weight">Baby weight (kg):</label>
+                <input type="number" id="weight" min="0.5" max="10" step="0.01" placeholder="Insert baby weight (kg)">
             </div>
             
-            <button onclick="calculateDosage()">احسب الجرعة</button>
+            <button onclick="calculateDosage()">Calculate the dose</button>
             
             <div id="dosageResult" class="result"></div>
         </div>
@@ -221,8 +221,8 @@
                         <div class="dosage-type">
                             <label>نوع الجرعة:</label>
                             <select id="doseType">
-                                <option value="septic">جرعة الإنتان</option>
-                                <option value="meningitic">جرعة التهاب السحايا</option>
+                                <option value="septic">septic dose</option>
+                                <option value="meningitic">meningitic dose</option>
                             </select>
                         </div>
                     `;
@@ -233,9 +233,9 @@
                         <div class="dosage-type">
                             <label>نوع الجرعة:</label>
                             <select id="doseType">
-                                <option value="loading">جرعة التحميل</option>
-                                <option value="maintenance">جرعة المداومة</option>
-                                <option value="prophylactic">جرعة الوقاية</option>
+                                <option value="loading">loading dose</option>
+                                <option value="maintenance">maintenance dose</option>
+                                <option value="prophylactic">prophylactic dose</option>
                             </select>
                         </div>
                     `;
@@ -246,8 +246,8 @@
                         <div class="dosage-type">
                             <label>نوع الجرعة:</label>
                             <select id="doseType">
-                                <option value="loading">جرعة التحميل</option>
-                                <option value="maintenance">جرعة المداومة</option>
+                                <option value="loading">loading dose</option>
+                                <option value="maintenance">maintenance dose</option>
                             </select>
                         </div>
                     `;
@@ -258,8 +258,8 @@
                         <div class="dosage-type">
                             <label>نوع الجرعة:</label>
                             <select id="doseType">
-                                <option value="loading">جرعة النزيف</option>
-                                <option value="maintenance">جرعة الوقاية</option>
+                                <option value="loading">bleeding dose</option>
+                                <option value="maintenance">prophylactic dose</option>
                             
                             </select>
                         </div>
@@ -271,8 +271,8 @@
                         <div class="dosage-type">
                             <label>نوع الجرعة:</label>
                             <select id="doseType">
-                                <option value="loading">جرعة التحميل</option>
-                                <option value="maintenance">جرعة المداومة</option>
+                                <option value="loading">loading dose</option>
+                                <option value="maintenance">maintenance dose</option>
                             </select>
                         </div>
                     `;
@@ -283,8 +283,8 @@
                         <div class="dosage-type">
                             <label>نوع الجرعة:</label>
                             <select id="doseType">
-                                <option value="loading">جرعة التحميل</option>
-                                <option value="maintenance">جرعة المداومة</option>
+                                <option value="loading">loading dose</option>
+                                <option value="maintenance">maintenance dose</option>
                             </select>
                         </div>
                     `;
@@ -295,8 +295,8 @@
                         <div class="dosage-type">
                             <label>نوع الجرعة:</label>
                             <select id="doseType">
-                                <option value="loading">جرعة التحميل</option>
-                                <option value="maintenance">جرعة المداومة</option>
+                                <option value="loading">loading dose</option>
+                                <option value="maintenance">maintenance dose</option>
                             </select>
                         </div>
                     `;
@@ -311,7 +311,7 @@
             const resultDiv = document.getElementById('intervalResult');
             
             if (!drug || isNaN(pma) || isNaN(postnatal)) {
-                alert('الرجاء اختيار دواء وإدخال عمر حملي وعمر بعد الولادة صحيحين');
+                alert('Please insert the drug, GA and PNA correctly!');
                 return;
             }
             
@@ -319,7 +319,7 @@
             let notes = '';
             
             switch(drug) {
-                case 'unasyn':
+                case 'unictam':
                     if (pma <= 29) {
                         interval = postnatal <= 28 ? '12 ساعة' : '8 ساعات';
                     } else if (pma >= 30 && pma <= 36) {
@@ -345,7 +345,7 @@
                     } else if (pma >= 35) {
                         interval = '24 ساعة (4 مجم/كجم)';
                     }
-                    notes = '* أو وجود اختناق معنوي، قناة شريانية مفتوحة، أو علاج بإندوميثاسين';
+
                     break;
                     
                 case 'cefotax':
@@ -428,9 +428,9 @@
             
             resultDiv.innerHTML = `
                 <h3>الفترة الزمنية الموصى بها لـ ${document.getElementById('drug').options[document.getElementById('drug').selectedIndex].text}</h3>
-                <p><strong>العمر الحملي:</strong> ${pma} أسابيع</p>
-                <p><strong>العمر بعد الولادة:</strong> ${postnatal} أيام</p>
-                <p><strong>الفترة الزمنية:</strong> ${interval}</p>
+                <p><strong>Gestational age:</strong> ${pma} أسابيع</p>
+                <p><strong>Postnatal age:</strong> ${postnatal} أيام</p>
+                <p><strong>Drug interval:</strong> ${interval}</p>
                 ${notes ? `<p class="note">${notes}</p>` : ''}
             `;
             resultDiv.style.display = 'block';
@@ -442,7 +442,7 @@
             const resultDiv = document.getElementById('dosageResult');
             
             if (!drug || isNaN(weight)) {
-                alert('الرجاء اختيار دواء وإدخال وزن صحيح');
+                alert('Pleaset insert the drug and weight correctly');
                 return;
             }
             
@@ -563,7 +563,13 @@
                     break;
                     
                 case 'konakion':
-                    notes = "يحل في محلول ملح ويعطي وريدي ببطئ شديد";
+                    const konakionType = doseTypeElement ? doseTypeElement.value : '';
+                    if (konakionType === 'bleeding') {
+                        preparation = `${weight} : ${weight * 2} سم`;
+                    } else {
+                        preparation = `30 شرطة عضل`;
+                    }
+                    notes = "يعطي لمدة 3 : 5 أيام";
                     break;
                     
                 case 'dopamine1':
