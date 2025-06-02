@@ -334,91 +334,91 @@
                 case 'gentamycin':
                     if (pma <= 29) {
                         if (postnatal <= 7) {
-                            interval = '48 ساعة (5 مجم/كجم)';
+                            interval = '48 hrs';
                         } else if (postnatal <= 28) {
-                            interval = '36 ساعة (4 مجم/كجم)';
+                            interval = '36 hrs';
                         } else {
-                            interval = '24 ساعة (4 مجم/كجم)';
+                            interval = '24 hrs';
                         }
                     } else if (pma >= 30 && pma <= 34) {
-                        interval = postnatal <= 7 ? '36 ساعة (4.5 مجم/كجم)' : '24 ساعة (4 مجم/كجم)';
+                        interval = postnatal <= 7 ? '36 hrs' : '24 hrs';
                     } else if (pma >= 35) {
-                        interval = '24 ساعة (4 مجم/كجم)';
+                        interval = '24 hrs';
                     }
 
                     break;
                     
                 case 'cefotax':
                     if (pma <= 29) {
-                        interval = postnatal <= 28 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 28 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 30 && pma <= 36) {
-                        interval = postnatal <= 14 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 14 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 37 && pma <= 44) {
-                        interval = postnatal <= 7 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 7 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 45) {
-                        interval = '6 ساعات';
+                        interval = '6 hrs';
                     }
                     break;
                     
                 case 'vancomycin':
                     if (pma <= 29) {
-                        interval = postnatal <= 14 ? '18 ساعة' : '12 ساعة';
+                        interval = postnatal <= 14 ? '18 hrs' : '12 hrs';
                     } else if (pma >= 30 && pma <= 36) {
-                        interval = postnatal <= 14 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 14 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 37 && pma <= 44) {
-                        interval = postnatal <= 7 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 7 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 45) {
-                        interval = '6 ساعات';
+                        interval = '6 hrs';
                     }
                     break;
                     
                 case 'meronam':
                     if (pma < 32) {
-                        interval = postnatal <= 14 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 14 ? '12 hrs' : '8 hrs';
                     } else {
-                        interval = postnatal <= 7 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 7 ? '12 hrs' : '8 hrs';
                     }
                     break;
                     
                 case 'flagyl':
                     if (pma <= 29) {
-                        interval = postnatal <= 28 ? '48 ساعة' : '24 ساعة';
+                        interval = postnatal <= 28 ? '48 hrs' : '24 hrs';
                     } else if (pma >= 30 && pma <= 36) {
-                        interval = postnatal <= 14 ? '24 ساعة' : '12 ساعة';
+                        interval = postnatal <= 14 ? '24 hrs' : '12 hrs';
                     } else if (pma >= 37 && pma <= 44) {
-                        interval = postnatal <= 7 ? '24 ساعة' : '12 ساعة';
+                        interval = postnatal <= 7 ? '24 hrs' : '12 hrs';
                     } else if (pma >= 45) {
-                        interval = '8 ساعات';
+                        interval = '8 hrs';
                     }
                     break;
                     
                 case 'diflucan':
                     if (pma <= 29) {
-                        interval = postnatal <= 14 ? '48 ساعة' : '24 ساعة';
+                        interval = postnatal <= 14 ? '48 hrs' : '24 hrs';
                     } else {
-                        interval = postnatal <= 7 ? '48 ساعة' : '24 ساعة';
+                        interval = postnatal <= 7 ? '48 hrs' : '24 hrs';
                     }
                     break;
                     
                 case 'dalacin':
                     if (pma <= 29) {
-                        interval = postnatal <= 28 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 28 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 30 && pma <= 36) {
-                        interval = postnatal <= 14 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 14 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 37 && pma <= 44) {
-                        interval = postnatal <= 7 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 7 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 45) {
-                        interval = '6 ساعات';
+                        interval = '6 hrs';
                     }
                     break;
                     
                 case 'avrezolid':
                     if (postnatal <= 14) {
-                        interval = '12 ساعة';
+                        interval = '12 hrs';
                     } else if (postnatal <= 28) {
-                        interval = '8 ساعات';
+                        interval = '8 hrs';
                     } else {
-                        interval = '8 ساعات';
+                        interval = '8 hrs';
                     }
                     break;
                     
@@ -428,8 +428,8 @@
             
             resultDiv.innerHTML = `
                 <h3>The drug interval for ${document.getElementById('drug').options[document.getElementById('drug').selectedIndex].text}</h3>
-                <p><strong>Gestational age:</strong> ${pma} أسابيع</p>
-                <p><strong>Postnatal age:</strong> ${postnatal} أيام</p>
+                <p><strong>Gestational age:</strong> ${pma} wks</p>
+                <p><strong>Postnatal age:</strong> ${postnatal} days</p>
                 <p><strong>Drug interval:</strong> ${interval}</p>
                 ${notes ? `<p class="note">${notes}</p>` : ''}
             `;
