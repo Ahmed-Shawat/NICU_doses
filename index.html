@@ -321,13 +321,13 @@
             switch(drug) {
                 case 'unictam':
                     if (pma <= 29) {
-                        interval = postnatal <= 28 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 28 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 30 && pma <= 36) {
-                        interval = postnatal <= 14 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 14 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 37 && pma <= 44) {
-                        interval = postnatal <= 7 ? '12 ساعة' : '8 ساعات';
+                        interval = postnatal <= 7 ? '12 hrs' : '8 hrs';
                     } else if (pma >= 45) {
-                        interval = '6 ساعات';
+                        interval = '6 hrs';
                     }
                     break;
                     
