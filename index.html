@@ -184,7 +184,7 @@
                     <option value="sildenafil">سيليدين</option>
                     <option value="risek">رايسك</option>
                     <option value="dexamethasone">ديكساميثازون</option>
-
+                    <option value="capoten">كابوتين 25</option>
                 </select>
             </div>
             
@@ -629,6 +629,11 @@
                     } else {
                         preparation = `<br>أول 3 أيام: ${weight} شرطة كل 12 ساعة<br>ثاني 3 أيام: ${weight * 5} شرطة كل 12 ساعة<br>ثالث يومين: ${weight * 2} شرطة كل 12 ساعة<br>رابع يومين: ${weight} شرطة كل 12 ساعة`;
                     }
+                    break;
+                    
+                 case 'capoten':
+                    preparation = `${weight} سم كل 8 ساعات`;
+                    notes = "<br>1. ربع قرص كابوتين 25 + 6.25 سم ج 5%<br>2. 0.5 سم من المحلول + 9.5 سم من ج 5% لزيادة التخفيف ";
                     break;
             }
             
