@@ -182,7 +182,10 @@
                     <option value="dobutamine">دوبيوتامين غير مخفف</option>
                     <option value="adrenaline">أدرينالين</option>
                     <option value="sildenafil">سيليدين</option>
-                    </select>
+                    <option value="risek">رايسك</option>
+                    <option value="dexamethasone">ديكساميثازون</option>
+
+                </select>
             </div>
             
             <div id="dosageOptions"></div>
@@ -301,6 +304,8 @@
                         </div>
                     `;
                     break;
+                  
+
             }
         }
         
@@ -599,8 +604,13 @@
                     
                 case 'lasix':
                     preparation = `${weight} سم كل 12 ساعة`;
-
                     break;
+
+                 case 'risek':
+                    preparation = `${0.5 * weight} سم + يستكمل إلي 5 سم ج 5% كل 24 ساعة`;
+                    notes = "وريدي";
+                    break;
+
             }
             
             // Format preparation for insulin syringe if needed
