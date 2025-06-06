@@ -304,7 +304,18 @@
                         </div>
                     `;
                     break;
-                  
+                    
+                 case 'dexamethasone':
+                    optionsDiv.innerHTML = `
+                        <div class="dosage-type">
+                            <label>نوع الجرعة:</label>
+                            <select id="doseType">
+                                <option value="extubation">extubation dose</option>
+                                <option value="BPD">BPD dose</option>
+                                                            </select>
+                        </div>
+                    `;
+                    break;
 
             }
         }
@@ -610,7 +621,15 @@
                     preparation = `${0.5 * weight} سم + يستكمل إلي 5 سم ج 5% كل 24 ساعة`;
                     notes = "وريدي";
                     break;
-
+                    
+                case 'dexamethasone':
+                    const dexamethasoneType = doseTypeElement ? doseTypeElement.value : '';
+                    if (dexamethasoneType === 'extubation') {
+                        preparation = `${weight * 25} شرطة`;
+                    } else {
+                        preparation = `1st 3 days: ${weigth} شرطة كل 12 ساعة<br>2nd 3 days: ${weigth * 5} شرطة كل 12 ساعة<br>3rd 2 days: ${weigth * 2} شرطة كل 12 ساعة<br>4th 2 days: ${weigth} شرطة كل 12 ساعة`;
+                    }
+                    break;
             }
             
             // Format preparation for insulin syringe if needed
