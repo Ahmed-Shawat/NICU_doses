@@ -211,17 +211,17 @@
         
         <div class="form-group">
             <label for="glucoseConc">Glucose Concentration (%):</label>
-            <input type="number" id="glucoseConc" min="1" max="50" step="0.1" placeholder="e.g., 10 for 10%">
+            <input type="number" id="glucoseConc" min="1" max="50" step="0.1" placeholder="e.g., 5, 10 or 25">
         </div>
         
         <div class="form-group">
-            <label for="fluidRate">Fluid Rate (ml/kg/hr):</label>
+            <label for="fluidRate">Fluid Rate (ml/hr):</label>
             <input type="number" id="fluidRate" min="0.1" max="20" step="0.1" placeholder="Fluid rate">
         </div>
         
         <div class="form-group">
             <label for="weightGIR">Weight (kg):</label>
-            <input type="number" id="weightGIR" min="0.3" max="10" step="0.01" placeholder="Baby weight">
+            <input type="number" id="weightGIR" min="0.3" max="10" step="0.01" placeholder="Baby weight by kg">
         </div>
         
         <button onclick="calculateGIR()">Calculate GIR</button>
