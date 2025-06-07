@@ -181,10 +181,12 @@
                     <option value="dopamine2">دوبامين غير مخفف</option>
                     <option value="dobutamine">دوبيوتامين غير مخفف</option>
                     <option value="adrenaline">أدرينالين</option>
-                    <option value="sildenafil">سيليدين</option>
-                    <option value="risek">رايسك</option>
+                    <option value="sildenafil">سيليدين 25</option>
+                    <option value="risek">رايسك 40</option>
                     <option value="dexamethasone">ديكساميثازون</option>
                     <option value="capoten">كابوتين 25</option>
+                    <option value="lanoxin">لانوكسين 0.25</option>
+                    <option value="tazocin">تازوسين</option>
                 </select>
             </div>
             
@@ -316,7 +318,7 @@
                         </div>
                     `;
                     break;
-
+                    
             }
         }
         
@@ -634,6 +636,16 @@
                  case 'capoten':
                     preparation = `${weight} سم كل 8 ساعات`;
                     notes = "<br>1. ربع قرص كابوتين 25 + 6.25 سم ج 5%<br>2. 0.5 سم من المحلول + 9.5 سم من ج 5% لزيادة التخفيف ";
+                    break;
+
+                 case 'lanoxin':
+                    preparation = `${weight * 0.5} سم كل 12 ساعة`;
+                    notes = "ربع قرص لانوكسين 0.25 + 6.25 سم ج 5%";
+                    break;
+
+                 case 'tazocin':
+                    preparation = `${weight} سم + ${5 - weight} سم ج 5% كل 8 ساعات`;
+                    notes = "وريدي ببطئ شديد IVI";
                     break;
             }
             
