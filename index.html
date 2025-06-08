@@ -553,9 +553,9 @@ function calculateGIR() {
                 case 'vancomycin':
                     const vancType = doseTypeElement ? doseTypeElement.value : '';
                     if (vancType === 'septic') {
-                        preparation = `${(20 * weight).toFixed(1)} شرطة`;
+                        preparation = `${20 * weight} شرطة`;
                     } else {
-                        preparation = `${(30 * weight).toFixed(1)} شرطة`;
+                        preparation = `${30 * weight} شرطة`;
                     }
                     notes = "وريدي ببطئ";
                     break;
